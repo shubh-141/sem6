@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    struct 
+    {
+        char input_pwd[5];
+        char current_pwd[5];
+    }locals;
+
+    strcpy(locals.current_pwd,"pass");
+    puts(locals.current_pwd);
+    gets(locals.input_pwd);
+    puts(locals.input_pwd);
+
+    puts(locals.current_pwd);
+
+    if (strcmp(locals.input_pwd,locals.current_pwd)==0){
+        puts("Cracked");
+    }
+    else{
+        puts("Incorrect password");
+    }
+    return 0;
+    
+}
